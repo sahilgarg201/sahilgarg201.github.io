@@ -60,7 +60,7 @@ h6{
 
 p{
     font-size:20px;
-    color:white;
+    color:black;
     margin:15px 0 20px 0;
 }
 
@@ -93,7 +93,7 @@ body{
     padding:0 20px;
 
 }
-#navbar li a 
+#navbar li a
 {
     text-decoration:none;
     font-size:16px;
@@ -102,13 +102,13 @@ body{
     transition: 0.3s ease;
 }
 #navbar li a:hover{
-    color:blue;
+    color:red;
     text-decoration:underline;
     border-bottom: solid 1px blue;
 }
-#navbar button{
+.button1{
     background-color:transparent;
-    color:white;
+    color:blue;
     border:4;
     border-color:black;
     border-radius:40px;
@@ -118,6 +118,61 @@ body{
     text-decoration:none;
     margin: 5px;
 }
+
+.dropdown {
+  float: left;
+
+}
+
+.dropdown .dropbtn {
+    text-decoration:none;
+    font-size:16px;
+    font-weight:600;
+    color:black;
+    transition: 0.3s ease;
+    border:none;
+    outline: none;
+    background-color: transparent;
+}
+
+.navbar a:hover, .dropbtn:hover  {
+  color:blue;
+  border: none;
+  outline: none;
+}
+
+.dropdown-content {
+  display: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  position: absolute;
+  background-color: rgb(72, 72, 187);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-weight: 600;
+}
+
+.dropdown-content a:hover {
+  background-color: red;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
 
 .carousel-indicators {
 	bottom: 350px;
@@ -526,6 +581,396 @@ span.text{
     padding:20px 20px 20px 20px;
     width:375px
   }
+
+
+
+  #head h1{
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+  }
+  #head h2{
+   
+    color: hsl(234, 12%, 34%);
+    font-size: 20px;
+  }
+
+  #head {
+    margin: 30px 30px 40px 30px;
+    text-align: center;
+  }
+  
+  #head > h1 {
+    margin: 20px 0;
+    font-weight: 200;
+  }
+  
+
+
+  #head > h1 strong {
+    font-weight: 600;
+  }
+  
+  #main
+  {
+    padding-bottom: 30px;
+  }
+  #main h5{
+    text-align: center;
+    font-weight: 600;
+  }
+  #main  p {
+    /*max-width: 520px;*/
+    margin: auto;
+    font-size: 15px;
+  }
+  #main img{
+    height: 90px;
+    width:90px;
+  }
+  @media (max-width: 443px) {
+    #head > h1 { font-size: 1.6em; }
+  }
+   
+  /*
+   * ## Cards Container Class
+   */
+  
+  .cards-container {
+    /* List Styling Clean-Up */
+    list-style: none;
+    padding: 0; margin: 0;
+    margin: auto;
+  }
+
+  
+  /*
+   * ### Responsive Layout Rules
+   */
+  
+  /* When viewport width is equal or greater than 788 pixels,
+   * the cards container will fix its width and will append the
+   * clear fix pseudo-class to avoid float property issues.
+   *
+   * The width will depend from the current viewport width.
+   * If is greater than 1166 pixels, will be 1106 pixels.
+   * Else, then will be 728 pixels.
+   */
+  
+  @media (min-width: 788px) {
+    .cards-container { 
+      width: 728px;
+    }
+    /* Clear Fix */
+    .cards-container::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  }
+  
+  @media (min-width: 1166px) {
+    .cards-container {
+      width: 1106px;
+    }
+  }
+  
+  /*
+   * ## Feature Card Class
+   */
+  
+  [class$='feature-card'] {
+    /* Positioning and Sizing */
+    position: relative;
+    box-sizing: border-box;
+    width: 350px; height: 350px;
+  
+    /* Alignment */
+    margin: 0;
+    padding: 32px;
+  
+    /* Box Details */
+    border-radius: 10px;
+    border-top: solid 5px black;
+    box-shadow: 2px 5px 20px rgb(0,0,0,0.1);
+  }
+   
+  /*
+   * ### Inner Elements
+   */
+  
+  [class$='feature-card'] h2, [class$='feature-card'] p { margin: 0; }
+  
+  [class$='feature-card'] img {
+    position: absolute;
+    bottom: 32px; right: 32px;
+  }
+  
+  /*
+   * ### Top Border Colors Rules
+   */
+  
+  [class$='feature-card'][class*='cyan'] {
+    border-color: hsl(180, 62%, 55%);
+  }
+  
+  [class$='feature-card'][class*='red'] {
+    border-color: hsl(0, 78%, 62%);
+  }
+  
+  [class$='feature-card'][class*='orange'] {
+    border-color: hsl(34, 97%, 64%);
+  }
+  
+  [class$='feature-card'][class*='blue'] {
+    border-color: hsl(212, 86%, 64%);
+  }
+  
+
+  
+  @media (min-width: 788px) {
+    [class$='feature-card'] {
+      float: left;
+    }
+  
+    @media (min-width: 1166px) {
+      
+      [class$='feature-card']:first-child {
+        margin: 140px 0;
+      }
+     
+      [class$='feature-card']:nth-child(2),
+      [class$='feature-card']:nth-child(3) {
+        margin: 0 22px;
+      }
+  
+      [class$='feature-card']:last-child {
+        margin-top: -110px;
+      }
+  
+      [class$='feature-card']:nth-child(3) {
+        margin-top: 30px;
+      }
+    }
+  
+    @media (max-width: 1165px) {
+  
+      [class$='feature-card']:nth-child(3),
+      [class$='feature-card']:nth-child(4) {
+        margin-top: 30px;
+      }
+  
+      [class$='feature-card']:nth-child(2),
+      [class$='feature-card']:nth-child(4) {
+        margin-left: 28px;
+      }
+    }
+  }
+  
+  @media (max-width: 787px) {
+  
+    [class$='feature-card'] {
+      width: 300px; height: 220px;
+      margin: auto;
+    }
+  
+    [class$='feature-card']:not(:first-child) {
+      margin-top: 22px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+  #reasons{
+    background-color:white;
+    min-height:100vh;
+
+  }
+
+  #reasons .top-text{
+    position:relative;
+    top:50px;
+    text-align:center;
+    width:40%;
+    margin:0 auto;
+  }
+   .card{
+    width:73%;
+    margin:80px auto;
+    display:flex;
+    justify-content: space-between;
+   }
+
+  .card-1{
+    background-color: white;
+    width:310px;
+    padding:20px;
+    border-radius:10px;
+    height:250px;
+    border-top:3px solid hsl(180,62%,55%);
+    margin:auto 0;
+    box-shadow:0 4px 6px 0 rgba(0,0,0,0.2);
+
+  }
+  .card p{
+    font-size:12px;
+  }
+  .card-1 .img{
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height:70px;
+  }
+
+  .card-1 .img img{
+    width:40px;
+    height:40px;
+  }
+
+  .card-2 .col-1{
+    background-color: white;
+    width:310px;
+    padding:20px;
+    border-radius:10px;
+    height:180px;
+    border-top:3px solid hsl(180,62%,55%);
+    margin-bottom:20px;
+    box-shadow:0 4px 6px 0;
+  }
+  /*
+  .card-2 .col-2{
+    background-color: white;
+    width:310px;
+    padding:20px;
+    border-radius:10px;
+    height:180px;
+    border-top:3px solid hsl(180,62%,55%);
+    margin-bottom:20px;
+    box-shadow:0 4px 6px 0;
+  }
+
+  .card-2 .col-1 .img{
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    height:70px;
+  }
+  .card-2 .col-2 .img{
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    height:70px;
+  }
+  .card-2 .col-1 .img img{
+    width:40px;
+    height:40px;
+  }
+
+  .card-2 .col-2 .img img{
+    width:40px;
+    height:40px;
+  }
+
+  .card-3{
+    background-color: white;
+    width:310px;
+    padding:20px;
+    border-radius:10px;
+    height:180px;
+    border-top:3px solid;
+    margin-bottom:20px;
+    box-shadow:0 4px 6px 0;
+
+  }
+
+  .card-3 .img{
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    height:70px;
+  }
+
+  .card-3 .img img{
+    width:40px;
+    height:40px;
+  }
+
+
+
+
+*/
+
+
+#faq{
+  margin:50px;
+}
+
+.layout {
+  width: 900px;
+  margin: auto;
+}
+.questions {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: wheat;
+  border-radius: 10px;
+}
+.ques p {
+  margin: 5px;
+  padding: 0;
+  font-family: Verdana;
+  font-size: 20px;
+}
+.ans p {
+  margin: 5px;
+  padding: 10px;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  background: white;
+  border-radius: 10px;
+}
+.questions:hover {
+  cursor: pointer;
+}
+.ans {
+  /*display: none;*/
+}
+.questions.active .ans {
+  display: block;
+}
 
 
 
