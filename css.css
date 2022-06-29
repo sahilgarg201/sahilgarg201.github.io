@@ -741,6 +741,7 @@ a.btn {
     display: inline-block;
     border-radius: 50px;
     margin: auto;  
+    width:160px
 
 }
 .usp .box .read_more:hover {
