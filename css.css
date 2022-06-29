@@ -1016,7 +1016,7 @@ a.btn {
 }
 
 
-@media (max-width: 370px) {
+@media (max-width: 395px) {
 
   [class$='feature-card'] {
     width: 300px;
@@ -1295,6 +1295,11 @@ span.texter {
     height: 25vmin;
     font-size: 8px;
   }
+  span.num {
+
+    font-size: 16px;
+  
+  }
 }
 
 @media screen and (max-width:818px) {
@@ -1315,29 +1320,31 @@ span.texter {
 
   }
   }
-  @media screen and (max-width:370px) {
+  @media screen and (max-width:420px) {
     #report-card{
       height:80vmin;
       width: 100%;
     }
     .wraped {
-      height:60vmin
+      height:70vmin
     }
     .contain {
       width: 25%;
-      height: 50vmin;
-      font-size: 6px;
+      height: 60vmin;
+ 
     }
     span.texter {
       font-size: 14px;
+      padding:2px
   
     }
+    span.num {
+
+      font-size: 16px;
+    
+    }
   
-span.num {
 
-  font-size: 20px;
-
-}
 
 }
 
