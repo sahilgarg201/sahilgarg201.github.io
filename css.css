@@ -1320,7 +1320,7 @@ span.texter {
 
   }
   }
-  @media screen and (max-width:420px) {
+  @media screen and (max-width:440px) {
     #report-card{
       height:80vmin;
       width: 100%;
