@@ -41,14 +41,15 @@ body {
 }
 
 #header {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 40px;
+  padding: 20px 20px;
   /*position:sticky;*/
   top: 0;
   height: 75px;
-  width: 100%;
+
   position: fixed;
   z-index: 1001;
 }
@@ -58,6 +59,7 @@ body {
   align-items: center;
   position: sticky;
   justify-content: center;
+  width:100%
 
 }
 
@@ -74,9 +76,9 @@ body {
   color: white;
 
 }
-.navbar li a:hover{
+#navbar li a:hover{
   color: blue;
-  text-decoration: none;
+  
 }
 
 .button1 {
@@ -107,7 +109,7 @@ body {
   outline: none;
   background-color: transparent;
 }
-.navbar li a:hover, .dropbtn:hover {
+#navbar li a:hover, .dropbtn:hover {
   color: blue;
   border: none;
   outline: none;
@@ -177,6 +179,29 @@ body {
   color: black;
 }
 
+@media (max-width:952px)
+{
+  #navbar li a{
+    font-size: 13px;
+    padding: 4px;
+  }
+}
+
+@media (max-width:952px)
+{
+  #navbar li a{
+    font-size: 13px;
+    padding: 4px;
+  }
+
+  #navbar button{
+    font-size: 13px;
+  }
+}
+
+#hero{
+  width: 100%;
+}
 
 .image01 {
   background-image:
@@ -206,6 +231,10 @@ body {
   display: flex;
   flex-direction: column;
 }
+.top-carousel .banner-content h1{
+  font-size: 50px;
+  font-weight:bold;
+}
 .top-carousel .banner-content p{
   text-align: center;
 }
@@ -229,6 +258,20 @@ body {
     }
   }
 
+  @media (max-width:884px)
+  {
+    .top-carousel .banner-content h1{
+      font-size:30px;
+    }
+    .extrapics{
+      width:250px;
+      height: 250px;
+      padding:100px 10px 0px 50px;
+
+
+    }
+
+  }
 .image02 {
   background-image:
     linear-gradient(to bottom, rgba(72, 116, 151, 0.52), #2da585),
@@ -326,10 +369,7 @@ body {
 
 }
 
-.top-carousel .banner-content h1 {
-  font-size: 64px;
-  font-weight: bold;
-}
+
 
 .but{
   text-align: center;
@@ -623,7 +663,7 @@ a.btn {
   height: auto;
   margin: 0 auto;
   position: relative;
-  width: 100%;
+  max-width: 100%;
   /*box-shadow: 10px 10px 50px white inset;*/
 }
 
@@ -702,7 +742,21 @@ a.btn {
 }
 
 
+@media(max-width:803px)
+{
+  .usp .box .content h3{
+    font-size: 17px;
+  }
+  .usp .box .content p{
+    font-size: 13px;
+    padding:7%;
+    font-weight: 600;
+  }
+  .usp .box{
+    width:200px
+  }
 
+}
 
 
 #head h1 {
@@ -901,9 +955,10 @@ a.btn {
 @media (max-width: 787px) {
 
   [class$='feature-card'] {
-    width: 300px;
-    height: 220px;
+    width: 400px;
+    height: 320px;
     margin: auto;
+    padding: 20px;
   }
 
   [class$='feature-card']:not(:first-child) {
@@ -927,31 +982,20 @@ a.btn {
 
   align-content: center;
   min-height: 100vh;
+  width:100%
 }
 
 #boxxed {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+
   min-height: 70vh;
-  width: 75vw;
-  margin: 80px 80px 80px 25vmin;
+  width:80% ;
+  place-self: center;
+  
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 12px
 }
 
-.image {
-  background-color: #12192c;
-  display: flex;
-  border-radius: 12px 0 0 12px;
-}
 
-.image img {
-  height: 50vh;
-  margin: 50px auto;
-  margin-top: 30%;
-  border: 3px solid white;
-  border-radius: 5px;
-}
 
 .cont {
   background-color: #12192c;
@@ -1048,12 +1092,9 @@ a.btn {
     grid-template-columns: 1fr;
     width: 100%;
     border-radius: none;
+    height:600px
   }
 
-  .image {
-    height: 100vh;
-    border-radius: none;
-  }
 
   .cont {
     height: 100vh;
@@ -1105,19 +1146,19 @@ a.btn {
 
 #report-card {
   text-align: center;
-  margin: 20px;
+  
   margin-bottom: 50px;
+  width:100%
 }
 
 .wraped {
 
   position: relative;
-  width: 80vw;
   display: flex;
-  left: 7%;
+
   justify-content: center;
   gap: 7%;
-  margin: 20px;
+
 }
 
 .contain {
@@ -1160,9 +1201,7 @@ span.texter {
 }
 
 @media screen and(max-width:1024px) {
-  .wraped {
-    width: 85vw;
-  }
+
 
   .contain {
     height: 26vmin;
@@ -1173,7 +1212,7 @@ span.texter {
 
 @media screen and(max-width:768px) {
   .wraped {
-    width: 90vw;
+
     flex-wrap: wrap;
     gap: 30px;
   }
@@ -1197,6 +1236,31 @@ span.texter {
   }
 }
 
+@media screen and (max-width:818px) {
+  #report-card{
+    height:70vmin;
+    width: 100%;
+  }
+  .wraped {
+    height:60vmin
+  }
+  .contain {
+    width: 30%;
+    height: 45vmin;
+    font-size: 8px;
+  }
+  span.texter {
+    font-size: 14px;
+
+  }
+  
+span.num {
+
+  font-size: 20px;
+
+}
+
+}
 
 .rounded-lg {
   border-radius: 1rem !important;
