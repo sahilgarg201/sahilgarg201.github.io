@@ -199,6 +199,47 @@ body {
   }
 }
 
+
+
+
+.checkbtn{
+  font-size: 30px;
+  cursor: pointer;
+  display:none;
+  color: white;
+  float:right;
+  line-height: 80px;
+  margin-right:40px;
+}
+
+#check{
+  display:none;
+}
+@media(max-width:600px){
+  .checkbtn{
+    display:block;
+    
+  }
+  #navbar{
+    position: fixed;
+    width:100%;
+    height:100vh;
+    background:#2c3e50;
+    top:80px;
+    left:-100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  #navbar ul li{
+    display:block;
+  }
+  #check:checked ~ ul{
+    left:0;
+  }
+
+
+}
+
 #hero{
   width: 100%;
 }
@@ -777,7 +818,7 @@ a.btn {
     font-weight: 600;
   }
   .usp .box{
-    width:130px;
+    width:160;
   }
   .usp .box .read_more
   {
@@ -786,7 +827,7 @@ a.btn {
   }
 
 }
-@media(max-width:370px)
+@media(max-width:390px)
 {
   .usp .box .content h3{
     font-size: 12px;
@@ -1434,6 +1475,9 @@ span.texter {
 
 */
 
+#faq{
+  padding-bottom: 30px;
+}
 
 .faq-heading{
   border-bottom: #777;
@@ -1480,6 +1524,11 @@ margin: auto;
   background-color:white;
   display: none;
   overflow: hidden;
+  font-size: 15px;
+}
+
+.faq-body p{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .faq-page:after {
   content: '\02795';
