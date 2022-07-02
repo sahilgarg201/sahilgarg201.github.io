@@ -73,7 +73,7 @@ body {
   
   font-size: 16px;
   font-weight: 600;
-  color: white;
+  color: black;
 
 }
 #navbar li a:hover{
@@ -85,7 +85,7 @@ body {
   background-color: transparent;
   color: blue;
   border: 4;
-  border-color: white;
+  border-color: black;
   border-radius: 40px;
   padding: 10px;
   font-size: 20px;
@@ -103,7 +103,7 @@ body {
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
-  color: white;
+  color: black;
   transition: 0.3s ease;
   border: none;
   outline: none;
@@ -246,7 +246,9 @@ body {
 
 .image01 {
   background-image:
-    linear-gradient(to bottom, rgba(72, 116, 151, 0.52), #2da585),
+    /*linear-gradient(to bottom, #ace4fe, #f8f0f0 , #f4c7e6 ),
+    url('herosec01.webp');*/
+    linear-gradient(to bottom, rgba(255, 229, 204, 1) , rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) ),
     url('herosec01.webp');
   height: 700px;
   background-size: cover;
@@ -323,7 +325,7 @@ body {
 
 .image02 {
   background-image:
-    linear-gradient(to bottom, rgba(72, 116, 151, 0.52), #2da585),
+  linear-gradient(to bottom, rgba(172, 228, 254, 1), rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) ),
     url('herosec02.webp');
   height: 700px;
   background-size: cover;
@@ -332,7 +334,7 @@ body {
 
 .image03 {
   background-image:
-    linear-gradient(to bottom, rgba(72, 116, 151, 0.52), #2da585),
+  linear-gradient(to bottom, rgba(255, 229, 204, 1) , rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) ),
     url('herosec03.jpg');
   height: 700px;
   background-size: cover;
@@ -341,7 +343,7 @@ body {
 
 .image04 {
   background-image:
-    linear-gradient(to bottom, rgba(72, 116, 151, 0.52), #2da585),
+  linear-gradient(to bottom, rgba(172, 228, 254, 1), rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) ),
     url('herosec04.jpg');
   height: 700px;
   background-size: cover;
@@ -349,7 +351,7 @@ body {
 }
 .image05 {
   background-image:
-    linear-gradient(to bottom, rgba(72, 116, 151, 0.52), #2da585),
+  linear-gradient(to bottom, rgba(255, 229, 204, 1) , rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) ),
     url('herosec05.jpg');
   height: 700px;
   background-size: cover;
@@ -357,7 +359,7 @@ body {
 }
 .image06 {
   background-image:
-    linear-gradient(to bottom, rgba(72, 116, 151, 0.52), #2da585),
+  linear-gradient(to bottom, rgba(172, 228, 254, 1), rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) ),
     url('herosec06.jpg');
   height: 700px;
   background-size: cover;
@@ -365,7 +367,7 @@ body {
 }
 .image07 {
   background-image:
-    linear-gradient(to bottom, rgba(72, 116, 151, 0.52), #2da585),
+  linear-gradient(to bottom, rgba(255, 229, 204, 1) , rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) ),
     url('herosec07.jpg');
   height: 700px;
   background-size: cover;
@@ -373,7 +375,7 @@ body {
 }
 .image08 {
   background-image:
-    linear-gradient(to bottom, rgba(72, 116, 151, 0.52), #2da585),
+  linear-gradient(to bottom, rgba(172, 228, 254, 1), rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) ),
     url('herosec08.jpg');
   height: 700px;
   background-size: cover;
@@ -381,7 +383,7 @@ body {
 }
 .image09 {
   background-image:
-    linear-gradient(to bottom, rgba(72, 116, 151, 0.52), #2da585),
+  linear-gradient(to bottom, rgba(255, 229, 204, 1) , rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) ),
     url('herosec09.jpg');
   height: 700px;
   background-size: cover;
@@ -389,7 +391,7 @@ body {
 }
 .image10 {
   background-image:
-    linear-gradient(to bottom, rgba(72, 116, 151, 0.52), #2da585),
+  linear-gradient(to bottom, rgba(172, 228, 254, 1), rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) ),
     url('herosec10.jpg');
   height: 700px;
   background-size: cover;
@@ -402,7 +404,8 @@ body {
 /*linear-gradient(0deg,#2b5a89,#2da585)*/
 
 .carousel-inner p {
-  color: white;
+  color: black;
+  font-weight: bold;;
 
 }
 
@@ -426,8 +429,8 @@ body {
 
 .btn-success {
   background: transparent !important;
-  color: white !important;
-  border: 2px solid white !important;
+  color: black !important;
+  border: 2px solid black !important;
   display: inline-block;
 }
 
