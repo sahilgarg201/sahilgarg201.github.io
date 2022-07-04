@@ -137,7 +137,7 @@ body {
 }
 
 .dropdown-content a:hover {
-  background-color: red;
+  background-color: rgb(111, 208, 243);
   text-decoration: none;
 }
 
@@ -249,7 +249,7 @@ body {
     /*linear-gradient(to bottom, #ace4fe, #f8f0f0 , #f4c7e6 ),
     url('herosec01.webp');*/
     linear-gradient(to bottom, rgba(255, 229, 204, 1) , rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) ),
-    url('herosec01.webp');
+    url('Images/herosec01.webp');
   height: 700px;
   background-size: cover;
   position: relative;
@@ -275,7 +275,7 @@ body {
   flex-direction: column;
 }
 .top-carousel .banner-content h1{
-  font-size: 50px;
+  font-size: 45px;
   font-weight:bold;
 }
 .top-carousel .banner-content p{
@@ -294,7 +294,7 @@ body {
       transform: scale(1, 1);
     }
     50% {
-      transform: scale(1.2, 1.2);
+      transform: scale(1.1, 1.1);
     }
     100% {
       transform: scale(1, 1);
@@ -326,7 +326,7 @@ body {
 .image02 {
   background-image:
   linear-gradient(to bottom, rgba(172, 228, 254, 1), rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) ),
-    url('herosec02.webp');
+    url('Images/herosec02.webp');
   height: 700px;
   background-size: cover;
 
@@ -335,7 +335,7 @@ body {
 .image03 {
   background-image:
   linear-gradient(to bottom, rgba(255, 229, 204, 1) , rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) ),
-    url('herosec03.jpg');
+    url('Images/herosec03.jpg');
   height: 700px;
   background-size: cover;
 
@@ -344,7 +344,7 @@ body {
 .image04 {
   background-image:
   linear-gradient(to bottom, rgba(172, 228, 254, 1), rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) ),
-    url('herosec04.jpg');
+    url('Images/herosec04.jpg');
   height: 700px;
   background-size: cover;
 
@@ -352,7 +352,7 @@ body {
 .image05 {
   background-image:
   linear-gradient(to bottom, rgba(255, 229, 204, 1) , rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) ),
-    url('herosec05.jpg');
+    url('Images/herosec05.jpg');
   height: 700px;
   background-size: cover;
 
@@ -360,7 +360,7 @@ body {
 .image06 {
   background-image:
   linear-gradient(to bottom, rgba(172, 228, 254, 1), rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) ),
-    url('herosec06.jpg');
+    url('Images/herosec06.jpg');
   height: 700px;
   background-size: cover;
 
@@ -368,7 +368,7 @@ body {
 .image07 {
   background-image:
   linear-gradient(to bottom, rgba(255, 229, 204, 1) , rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) ),
-    url('herosec07.jpg');
+    url('Images/herosec07.jpg');
   height: 700px;
   background-size: cover;
 
@@ -376,7 +376,7 @@ body {
 .image08 {
   background-image:
   linear-gradient(to bottom, rgba(172, 228, 254, 1), rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) ),
-    url('herosec08.jpg');
+    url('Images/herosec08.jpg');
   height: 700px;
   background-size: cover;
 
@@ -384,7 +384,7 @@ body {
 .image09 {
   background-image:
   linear-gradient(to bottom, rgba(255, 229, 204, 1) , rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) ),
-    url('herosec09.jpg');
+    url('Images/herosec09.jpg');
   height: 700px;
   background-size: cover;
 
@@ -392,7 +392,7 @@ body {
 .image10 {
   background-image:
   linear-gradient(to bottom, rgba(172, 228, 254, 1), rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) ),
-    url('herosec10.jpg');
+    url('Images/herosec10.jpg');
   height: 700px;
   background-size: cover;
 
@@ -709,7 +709,7 @@ a.btn {
   background-size: cover;
   background-image:
   linear-gradient(to bottom, rgba(172, 228, 254, 1), rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) ),
-    url('herosec03.jpg');
+    url('Images/herosec03.jpg');
 
 
   height: auto;
@@ -1278,7 +1278,7 @@ a.btn {
   font-size: 16px;
   border-radius: 0.5em;
   background: linear-gradient(to bottom, rgba(172, 228, 254, 1), rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) );
-  border-bottom: 10px solid rgb(48, 151, 215);
+  border-bottom: 10px solid  rgba(172, 228, 254, 1);
 
 }
 
@@ -1427,10 +1427,11 @@ span.texter {
   width: 375px
 }
 
-@media (max-width:1552px)
+@media (max-width:1400px)
 {
   .price-sections{
     width:340px;
+    justify-content: center;
     
   }
 }
@@ -1441,8 +1442,12 @@ span.texter {
     width:310px;
     
   }
-}
+  .price-sections h2{
+    font-size: 20px;
+  }
 
+}
+.price-sections
 /*
 #faq {
   margin: 50px;
