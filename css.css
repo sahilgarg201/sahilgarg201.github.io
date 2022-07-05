@@ -82,7 +82,7 @@ body {
 }
 
 .button1 {
-  background-color: transparent;
+  background-color: orange;
   color: blue;
   border: 4;
   border-color: black;
@@ -280,6 +280,7 @@ body {
 }
 .top-carousel .banner-content p{
   text-align: center;
+  color: rgb(62, 5, 72);
 }
 
 .extrapics{
@@ -429,21 +430,22 @@ body {
 
 .btn-success {
   background: transparent !important;
-  color: black !important;
-  border: 2px solid black !important;
+  color: rgb(62, 5, 72) !important;
+  border: 2px solid rgb(62, 5, 72)!important;
+  font-weight: 700;
   display: inline-block;
 }
 
 .btn-success:hover {
   color: red;
-  border-color: transparent !important;
+  border-color: black !important;
 }
 
 
 
 a.btn {
   padding: 10px 30px;
-  background: #f7cc4b;
+  background: #ffff53;
   color: #333;
   border-radius: 50px;
   border: 2px solid #34495e;
@@ -454,6 +456,10 @@ a.btn {
   width:120px;
   font-weight: 700;
  
+}
+
+.read_more{
+  background-color: rgb(255, 151, 40);
 }
 
 

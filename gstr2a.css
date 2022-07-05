@@ -49,7 +49,7 @@
 }
 
 .button1{
-    background-color:transparent;
+    background-color:orange;
     color:blue;
     border:4;
     border-color:black;
@@ -322,8 +322,9 @@ ul.breadcrumb {
   .usp .box .content h3{
     font-size: 22px;
     text-align:center;
-    padding:7%;
+    padding-bottom:7%;
     font-weight: 700;
+    width:35vh;
   }
   .usp .box .content h5{
     font-size: 19px;
@@ -357,7 +358,8 @@ ul.breadcrumb {
       display: inline-block;
       border-radius: 50px;
       margin: auto;  
-      width:160px
+      width:160px;
+      background-color:orange;
   
   }
   .usp .box .read_more:hover {
