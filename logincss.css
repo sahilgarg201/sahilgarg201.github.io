@@ -6,16 +6,16 @@
 .hero{
     height: 100%;
     width: 100%;
-    background-image: url(Images/hero.jpg);
+    background-image:  linear-gradient(to bottom, rgba(255, 229, 204, 1) , rgba(226, 201, 201, 0.62), rgba(201, 182, 210, 1) );
     background-position: center;
     background-size: cover;
     position:absolute;
 }
 .form-box{
-    width: 350px;
-    height: 450px;
-    position: absolute;
-    margin: 20vmin 0 0 120px;
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
     background: white;
     padding: 5px;
     overflow: hidden;
@@ -46,7 +46,7 @@
     border-radius: 30px;
     transition: .5s;
 }
-.social-icons{
+/*  .social-icons{
     margin: 40px auto;
     text-align: center;
 }
@@ -57,20 +57,20 @@
     color: #82a9ee;
     font-size: 25px;
     margin: 10px;
-    background: none;
+    background: none; 
 }
 .social-icons i:hover{
     color: #05579a;
-}
+} */
 .input-group{
-    top: 180px;
+    top: 150px;
     position: absolute;
     width: 280px;
     transition: .5s;
 }
 .input-field{
     width: 100%;
-    padding: 10px 0;
+    padding: 18px 0;
     margin: 5px;
     border-top: 0;
     border-left: 0;

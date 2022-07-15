@@ -140,16 +140,22 @@
 
         <a href="https://tallykonnect.com"><img src="https://tallykonnect.com/img/logo.png" alt="Company Logo"
                 width="200" height="32.125"></a>
+        <button class="mobile-nav-toggle" aria-controls="navbar" aria-expanded="false"><span
+                class="sr-only">Menu</span></button>
         <div>
-            <ul id="navbar">
-                <li><a href=".price-sections">HOME</a></li>
+            <ul id="navbar" data-visible="false">
+                <li><a href="index.html">HOME</a></li>
                 <div class="dropdown">
                     <li><button class="dropbtn">OUR OFFERINGS</button></li>
                     <div class="dropdown-content">
-                        <a href="#">ADVANCE REPORTS</a>
+                        <a href="#">SMART REPORTS</a>
                         <a href="GSTR2A.html">GST CONNECT</a>
-                        <a href="tallyonmobile.html">MOBILE APP</a>
+                        <a href="tallyonmobile.html">MOBILE ADDONS</a>
                         <a href="#">CONNECTED BANKING </a>
+                        <a href="#">WHATSAPP CONNECT</a>
+                        <a href="#">SALES PURCHASE ORDER</a>
+                        <a href="#">UPI CONNECT</a>
+                        <a href="#">MOBILE APP</a>
                         <a href="#">1ERP</a>
                         <a href="#">OCR PURCAHSE</a>
                     </div>
@@ -171,6 +177,21 @@
     </section>
 
     <script>
+        const primaryNav = document.querySelector("#navbar");
+        const navToggle = document.querySelector(".mobile-nav-toggle");
+
+        navToggle.addEventListener('click', () => {
+            const visibility = primaryNav.getAttribute("data-visible");
+            if (visibility === "false") {
+                primaryNav.setAttribute("data-visible", true);
+                navToggle.setAttribute("aria-expanded",true);
+            }
+            else if (visibility === "true") {
+                primaryNav.setAttribute("data-visible", false)
+                navToggle.setAttribute("aria-expanded",false);
+            }
+
+        })
         window.addEventListener('scroll', function () {
             let header = document.querySelector('#header');
             let windowPosition = window.scrollY > 0;
@@ -203,9 +224,9 @@
                                 <div class="banner-content">
                                     <h1 style="color:rgb(62, 5, 72)">GET MORE FROM YOUR TALLY </h1>
                                     <br>
-                                    <p>FREE DOWNLOAD</p>
                                     <br>
-                                    <p>Download Desktop App</p>
+                                    <p style="font-weight:600;font-size:25px">Download Desktop App</p>
+                                    <br>
                                     <div class="but">
                                         <a class="btn btn-success btn-lg" href="#">64 BIT</a>
                                         <a class="btn btn-success btn-lg" href="#">32 BIT</a></p>
@@ -222,7 +243,7 @@
                             <!-- <img src="herosec02.webp" class="d-block w-100" alt="" style="height:630px;">-->
                             <div class="hero-sec">
                                 <div class="banner-content">
-                                    <h1 style="color:rgb(62, 5, 72)" >SMART REPORTS</h1>
+                                    <h1 style="color:rgb(62, 5, 72)">SMART REPORTS</h1>
                                     <br>
                                     <p class="pt-4"><a class="btn btn-success btn-lg" style="width: 160px;"
                                             href="#">Read More</a></p>
@@ -283,7 +304,7 @@
                                     <p class="pt-4"><a class="btn btn-success btn-lg" style="width: 160px;"
                                             href="whatsapp.html">Read More</a></p>
                                 </div>
-                                <img src="mainpic02.png" alt="meeting image" class="extrapics">
+                                <img src="Images/mainpic02.png" alt="meeting image" class="extrapics">
                             </div>
                         </div>
                     </div>
@@ -292,7 +313,7 @@
                             <div class="hero-sec">
                                 <!-- <img src="herosec03.jpg" class="d-block w-100" alt="" style="height:630px;">-->
                                 <div class="banner-content">
-                                    <h1  style="color:rgb(62, 5, 72)">SALES PURCHASE ORDER </h1>
+                                    <h1 style="color:rgb(62, 5, 72)">SALES PURCHASE ORDER </h1>
                                     <br>
                                     <p class="pt-4"><a class="btn btn-success btn-lg" style="width: 160px;"
                                             href="#">Read More</a></p>
@@ -334,8 +355,8 @@
                             <div class="hero-sec">
                                 <!-- <img src="herosec03.jpg" class="d-block w-100" alt="" style="height:630px;">-->
                                 <div class="banner-content">
-                                    <h1 style="color:rgb(62, 5, 72)">COMING SOON</h1>
-                                    <h3 style="font-size:30px;color:rgb(58, 49, 49)">1ERP AND OCR PURCHASE</h3>
+                                    <h1 style="color:rgb(62, 5, 72)">1ERP AND OCR PURCHASE</h1>
+                                    <h3 style="font-size:30px;color:rgb(58, 49, 49)">COMING SOON</h3>
                                     <br>
                                     <p class="pt-4"><a class="btn btn-success btn-lg" style="width: 160px;"
                                             href="#">Read More</a></p>
@@ -351,412 +372,191 @@
     </section>
 
 
-
-    <!--       
-        <section id="link">
-            <div>
-                <h1 id="save">SAVE MONEY & SAVE TIME</h1>
-            </div>
-            <div id="yt">
-                <iframe src="https://www.youtube.com/embed/fG5pQgzboN8"  width="800" height="400" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-            </div>
-        </section>
-
-        <section id="feature">
-            <div id="miss">
-                <img src="https://tallykonnect.com/img/mismatch.png" alt="Company Logo" width="500px" height="300px" >
-                <div id="info">
-                    <h1 style="text-align:center">GET GSTR 2A - 2B Mismatch Report Directly</h1>
-                    <ul class="x">
-                    <div class="point">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="box" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-                        </svg>
-                        <li class="text-xl font-semibold text-gray-600 font-sans" style="font-family: 'Source Serif 4', sans-serif;">ALL UNMATCH VOUCHERS</li>
-                    </div>
-                    <div class="point">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="box" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-                        </svg>
-                        <li class="text-xl font-semibold text-gray-600 font-sans" style="font-family: 'Source Serif 4', sans-serif;">ALL MATCHED VOUCHERS</li>
-                    </div>
-                    <div class="point">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="box" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-                        </svg>
-                        <li class="text-xl font-semibold text-gray-600 font-sans" style="font-family: 'Source Serif 4', sans-serif;">VOUCHERS ONLY IN GST</li>
-                    </div>
-                    <div class="point">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="box" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-                        </svg>
-                        <li class="text-xl font-semibold text-gray-600 font-sans" style="font-family: 'Source Serif 4', sans-serif;">VOUCHERS ONLY IN TALLY</li>
-                    </div>
-                    <div class="point">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="box" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-                        </svg>
-                        <li class="text-xl font-semibold text-gray-600 font-sans" style="font-family: 'Source Serif 4', sans-serif;">OTHER</li>
-                    </div>
-                    </ul>
-                </div>
-            </div>
-    
-
-        </section>
-
-        <section class="report">
-            <div id="content">
-                <h3 style="height: 30px;width:900px">Meeting Every Month</h3>
-                <h4 style="padding:15px">3B Filing Is Now Easier With TallyKonnect Mismatch Reporting Tool
-                </h4>
-                <ul class="space-y-4 text-lg md:text-xl md:w-3/5 font-extrabold text-black tracking-widest leading-relaxed">
-                    <div class="lines">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="box" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-                        </svg>
-                        <li class="text-xl font-semibold text-gray-600" style="font-family: 'Source Serif 4', sans-serif;">Its easy and fast</li>
-                    </div>
-                    <div class="lines">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="box" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-                        </svg>
-                        <li class="text-xl font-semibold text-gray-600" style="font-family: 'Source Serif 4', sans-serif;">No file export or import</li>
-                    </div>
-                    <div class="lines">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="box" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-                        </svg>
-                        <li class="text-xl font-semibold text-gray-600" style="font-family: 'Source Serif 4', sans-serif;">Desktop Application</li>
-                    </div>
-                    <div class="lines">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="box" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-                        </svg>
-                        <li class="text-xl font-semibold text-gray-600" style="font-family: 'Source Serif 4', sans-serif;">Download and share report in excel</li>
-                    </div>
-                </ul>
-            </div>
-            <div id="cal">
-                <img src="Calender.gif" alt="meeting image" style="height:380px ;width:380px">
-            </div>
-
-        </section>
-
-        <section id="use">
-            <div id="things">
-                <img src="use.gif" alt="Company Logo" width="500px" height="300px" >
-                <div id="info">
-                    <h1 style="text-align:center">IT IS WISE TO USE TALLYKONNECT BUSINESSWISE</h1>
-                    <ul class="x">
-                    <div class="point">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="box" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-                        </svg>
-                        <li class="text-xl font-semibold text-gray-600 font-sans" style="font-family: 'Source Serif 4', sans-serif;">No more ITC leakage</li>
-                    </div>
-                    <div class="point">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="box" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-                        </svg>
-                        <li class="text-xl font-semibold text-gray-600 font-sans" style="font-family: 'Source Serif 4', sans-serif;">No more false billing fraud</li>
-                    </div>
-                    <div class="point">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="box" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-                        </svg>
-                        <li class="text-xl font-semibold text-gray-600 font-sans" style="font-family: 'Source Serif 4', sans-serif;">No more last minute penalties to be paid for errors</li>
-                    </div>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    
-
-        <section id="why">
-            <div>
-                <h1>ARE
-                    <span
-                       class="txt-rotate"
-                       data-period="900"
-                       data-rotate='[ "THESE  SERVICES  NOT  AVAILABLE  ANYWHERE  ELSE ?", "WE  THE FIRST ONE ?", "WE THE ONLY ONE?"]'></span>
-                  </h1>
-            </div>
-            <div id="service">
-             <p style="color:#3c3c3c">   Many of the services listed here are available in marketplace with different vendors  in an unorganized way. We are  the first one  to  offer   a bouquet of  services  as  one package.
-            </p>
-            </div>
-        </section>
-
-
-
-    <section id="box-model">
+    <section>
         <div>
             <h1 id="rep">BUSINESS SOLUTIONS FOR TALLY USERS</h1>
         </div>
-        <section id="model">
-            <div class="box-data">
-                <img src="report.png" alt="" class="sneaker">
-                <h5> ADVANCE REPORTS </h5>
-                <p style="color:#3c3c3c; font-size: 16px;"> Get business reports on debtors, creditors, stock &
-                    production in a smart format. View & share with customers, sales staff, clients directly on
-                    whatsapp.</p>
-                <button> Read More</button>
+        <div class="usp">
+            <div class="box">
+                <div class="icon"><img
+                        src="https://www.scoreme.in/pro_bfloors/services_img/more_image/64179964020stadistics.png">
+                </div>
+                <div class="content">
+                    <h3>MOBILE APP </h3>
+                    <ul class="y">
+                        <li>
+                            <p>Manage business from remote. Get realtime updates in your mobile device </p>
+                        </li>
+                        </ol>
+                </div>
+                <div class="read_buttons">
+                    <a class="read_more" style="width: 160px;" href="#">Read More</a>
+                </div>
             </div>
-            <div class="box-data">
-                <img src="gst.jpg" alt="" class="sneaker">
-                <h5> GST CONNECT </h5>
-                <p style="color:#3c3c3c; font-size: 16px">Search any dealer on gst database on Tally mobile app. One
-                    click verification of any Gstn id now possible in Tally. Updated Return file status also available.
-                    No more Json file export or import needed to reconcile GSTR 2A/2B reports.
-                    Get it done on a click of a button.</p>
-                <button> Read More</button>
-            </div>
-            <div class="box-data">
-                <img src="mobile.png" alt="" class="sneaker">
-                <h5> MOBILE APP ACCESS </h5>
-                <p style="color:#3c3c3c; font-size: 16px"> Everything is available on mobile app then why not Tally
-                    business data?
-                    It comes with many addons, not available in other similar apps like BUSINESSCARD, UPI QR CODE & ID,
-                    GST SEARCH DEALER, PRICE LIST, PROFORMA, QUOTATION, SALES & PURCHASE ORDER MANAGEMENT.</p>
-                <button> Read More</button>
-            </div>
-            <div class="box-data">
-                <img src="addons.png" alt="" class="sneaker">
-                <h5> MOBILE APP ADD ONS </h5>
-                <p style="color:#3c3c3c; font-size: 16px"> Tallykonnect plugin is the only one which enables businesses
-                    to create their own business card for sharing with clients and customers.
-                    It is so many business friendly features that users can create proforma invoices, price lists, price
-                    quotations, sales order in the app itself.</p>
-                <button> Read More</button>
-            </div>
-            <div class="box-data">
-                <img src="connected.jpg" alt="" class="sneaker">
-                <h5> CONNECTED BANKING </h5>
-                <p style="color:#3c3c3c; font-size: 16px"> Banking is one of the mainstay of any ERP use . We have made
-                    it connected with ICICI bank . Account holders of this bank , now need not do transactions on bank
-                    website or app. Now make payments, fetch receipts, even month end reconciliation can be done in a
-                    jiffy.
-                    Save on manpower cost, errors and mismatch headaches</p>
-                <button> Read More</button>
-            </div>
-            <div class="box-data">
-                <img src="erp.jpg" alt="" class="sneaker">
-                <h5> 1ERP </h5>
-                <p style="color:#3c3c3c; font-size: 16px"> Today money transactions happen from one user to another in
-                    seconds. We therefore envision to implement a realtime transaction platform , where the seller
-                    invoice be notified to its buyer and a payment note from buyer be sent to seller as receipt in real
-                    time.
-                    That too irrespective of the user ERP. The objective is to make transactions paperless and create a
-                    dmat format of trading for all businesses. </p>
-                <button> Read More</button>
-            </div>
-            <div class="box-data">
-                <img src="ocr.jpg" alt="" class="sneaker">
-                <h5> OCR PURCAHSE </h5>
-                <p style="color:#3c3c3c; font-size: 16px">A revolutionary concept of purchase transaction entry in Tally
-                    is hereby unfolded.
-                    Scan any computer generated soft/hard copy of purchase invoice ,extract important data from pdf and
-                    get it updated on Tally as purchase voucher.
-                    This is a premium service and is available for dedicated premium subscribers only.
-                </p>
-                <button> Read More</button>
-            </div>
-        </section>
-    </section>
--->
 
-
-        <section>
-            <div>
-                <h1 id="rep">BUSINESS SOLUTIONS FOR TALLY USERS</h1>
+            <div class="box">
+                <div class="icon"><img
+                        src="https://www.scoreme.in/pro_bfloors/services_img/service_icon/675447524presentation.png">
+                </div>
+                <div class="content">
+                    <h3>GST CONNECT </h3>
+                    <ul class="y">
+                        <li>
+                            <p>Now search any dealer in GST portal from Tally. Get instant ITC mismatch report in 2A
+                                -2B format . claim 100% ITC.</p>
+                        </li>
+                        </ol>
+                </div>
+                <div class="read_buttons">
+                    <a class="read_more" href="GSTR2A.html">Read More</a>
+                </div>
             </div>
-            <div class="usp">
-                <div class="box">
-                    <div class="icon"><img
-                            src="https://www.scoreme.in/pro_bfloors/services_img/more_image/64179964020stadistics.png">
-                    </div>
-                    <div class="content">
-                        <h3>MOBILE APP </h3>
-                        <ul class="y">
-                            <li>
-                                <p>Manage business from remote. Get realtime updates in your mobile device </p>
-                            </li>
-                            </ol>
-                    </div>
-                    <div class="read_buttons">
-                        <a class="read_more" style="width: 160px;" href="#">Read More</a>
-                    </div>
-                </div>
-                
-                <div class="box">
-                    <div class="icon"><img
-                            src="https://www.scoreme.in/pro_bfloors/services_img/service_icon/675447524presentation.png">
-                    </div>
-                    <div class="content">
-                        <h3>GST CONNECT </h3>
-                        <ul class="y">
-                            <li>
-                                <p>Now search any dealer in GST portal from Tally. Get instant ITC mismatch report in 2A
-                                    -2B format . claim 100% ITC.</p>
-                            </li>
-                            </ol>
-                    </div>
-                    <div class="read_buttons">
-                        <a class="read_more"  href="GSTR2A.html">Read More</a>
-                    </div>
-                </div>
 
-                <div class="box">
-                    <div class="icon"><img
-                            src="https://www.scoreme.in/pro_bfloors/services_img/service_icon/114322209analysis.png">
-                    </div>
-                    <div class="content">
-                        <h3>WHATSAPP CONNECT</h3>
-                        <ul class="y">
-                            <li>
-                                <p>Integrate your Tally with whatsapp. Send Bills, vouchers , reminders, reports
-                                    directly from desktop to mobile devices.
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="read_buttons">
-                        <a class="read_more"  href="whatsapp.html">Read More</a>
-                    </div>
+            <div class="box">
+                <div class="icon"><img
+                        src="https://www.scoreme.in/pro_bfloors/services_img/service_icon/114322209analysis.png">
                 </div>
+                <div class="content">
+                    <h3>WHATSAPP CONNECT</h3>
+                    <ul class="y">
+                        <li>
+                            <p>Integrate your Tally with whatsapp. Send Bills, vouchers , reminders, reports
+                                directly from desktop to mobile devices.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="read_buttons">
+                    <a class="read_more" href="whatsapp.html">Read More</a>
+                </div>
+            </div>
 
-                <div class="box">
-                    <div class="icon"><img
-                            src="https://www.scoreme.in/pro_bfloors/services_img/service_icon/461245170plan.png"></div>
-                    <div class="content">
-                        <h3>SALES PURCHASE ORDER</h3>
-                        <ul class="y">
-                            <li>
-                                <p>Experience the best sales purchase automation platform for your business</p>
-                            </li>
-                            </ol>
-                    </div>
-                    <div class="read_buttons">
-                        <a class="read_more" href="#">Read More</a>
-                    </div>
+            <div class="box">
+                <div class="icon"><img
+                        src="https://www.scoreme.in/pro_bfloors/services_img/service_icon/461245170plan.png"></div>
+                <div class="content">
+                    <h3>SALES PURCHASE ORDER</h3>
+                    <ul class="y">
+                        <li>
+                            <p>Experience the best sales purchase automation platform for your business</p>
+                        </li>
+                        </ol>
                 </div>
-                <div class="box">
-                    <div class="icon"><img
-                            src="https://www.scoreme.in/pro_bfloors/services_img/service_icon/461245170plan.png"></div>
-                    <div class="content">
-                        <h3>SMART REPORTS</h3>
-                        <ul class="y">
-                            <li>
-                                <p>Enhance your business productivity through smart reports in production, stock &
-                                    accounting .</p>
-                            </li>
-                            </ol>
-                    </div>
-                    <div class="read_buttons">
-                        <a class="read_more"  href="#">Read More</a>
-                    </div>
+                <div class="read_buttons">
+                    <a class="read_more" href="#">Read More</a>
                 </div>
-                <div class="box">
-                    <div class="icon"><img
-                            src="https://www.scoreme.in/pro_bfloors/services_img/service_icon/461245170plan.png"></div>
-                    <div class="content">
-                        <h3>MOBILE APP-ADDONS</h3>
-                        <ul class="y">
-                            <li>
-                                <p>Download mobile app to create and share business documents in pre formatted form such
-                                    as sale quotation, proforma invoice, and even a business card.</p>
-                            </li>
-                            </ol>
-                    </div>
-                    <div class="read_buttons">
-                        <a class="read_more" href="tallyonmobile.html">Read More</a>
-                    </div>
+            </div>
+            <div class="box">
+                <div class="icon"><img
+                        src="https://www.scoreme.in/pro_bfloors/services_img/service_icon/461245170plan.png"></div>
+                <div class="content">
+                    <h3>SMART REPORTS</h3>
+                    <ul class="y">
+                        <li>
+                            <p>Enhance your business productivity through smart reports in production, stock &
+                                accounting .</p>
+                        </li>
+                        </ol>
                 </div>
-                <div class="box">
-                    <div class="icon"><img
-                            src="https://www.scoreme.in/pro_bfloors/services_img/service_icon/461245170plan.png"></div>
-                    <div class="content">
-                        <h3>UPI CONNECT </h3>
-                        <ul class="y">
-                            <li>
-                                <p>Get an unique UPI ID created against current account . Receive and send payments
-                                    without NEFT/RTGS formalities, in seconds.</p>
-                            </li>
-                            </ol>
-                    </div>
-                    <div class="read_buttons">
-                        <a class="read_more"  href="#">Read More</a>
-                    </div>
+                <div class="read_buttons">
+                    <a class="read_more" href="#">Read More</a>
                 </div>
-                <div class="box">
-                    <div class="icon"><img
-                            src="https://www.scoreme.in/pro_bfloors/services_img/service_icon/461245170plan.png"></div>
-                    <div class="content">
-                        <h3>CONNECTED BANKING </h3>
+            </div>
+            <div class="box">
+                <div class="icon"><img
+                        src="https://www.scoreme.in/pro_bfloors/services_img/service_icon/461245170plan.png"></div>
+                <div class="content">
+                    <h3>MOBILE APP-ADDONS</h3>
+                    <ul class="y">
+                        <li>
+                            <p>Download mobile app to create and share business documents in pre formatted form such
+                                as sale quotation, proforma invoice, and even a business card.</p>
+                        </li>
+                        </ol>
+                </div>
+                <div class="read_buttons">
+                    <a class="read_more" href="tallyonmobile.html">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><img
+                        src="https://www.scoreme.in/pro_bfloors/services_img/service_icon/461245170plan.png"></div>
+                <div class="content">
+                    <h3>UPI CONNECT </h3>
+                    <ul class="y">
+                        <li>
+                            <p>Get an unique UPI ID created against current account . Receive and send payments
+                                without NEFT/RTGS formalities, in seconds.</p>
+                        </li>
+                        </ol>
+                </div>
+                <div class="read_buttons">
+                    <a class="read_more" href="#">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><img
+                        src="https://www.scoreme.in/pro_bfloors/services_img/service_icon/461245170plan.png"></div>
+                <div class="content">
+                    <h3>CONNECTED BANKING </h3>
+                    <ul class="y">
+                        <li>
+                            <p>start banking in Tally . Add beneficiary, make payments , pay bills .
+                                Instant bank reconciliation through auto payment voucher creation.
+                            </p>
+                        </li>
+                        </ol>
+                </div>
+                <div class="read_buttons">
+                    <a class="read_more" href="#">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><img
+                        src="https://www.scoreme.in/pro_bfloors/services_img/service_icon/461245170plan.png"></div>
+                <div class="content">
+                    <h3>1ERP </h3>
+                    <h5>Coming soon</h2>
                         <ul class="y">
                             <li>
-                                <p>start banking in Tally . Add beneficiary, make payments , pay bills .
-                                    Instant bank reconciliation through auto payment voucher creation.
+                                <p>Join the first ever cloud exchange for sales ,purchase entries in any ERP
                                 </p>
                             </li>
                             </ol>
-                    </div>
-                    <div class="read_buttons">
-                        <a class="read_more"  href="#">Read More</a>
-                    </div>
                 </div>
-                <div class="box">
-                    <div class="icon"><img
-                            src="https://www.scoreme.in/pro_bfloors/services_img/service_icon/461245170plan.png"></div>
-                    <div class="content">
-                        <h3>1ERP </h3>
-                        <h5>Coming soon</h2>
-                            <ul class="y">
-                                <li>
-                                    <p>Join the first ever cloud exchange for sales ,purchase entries in any ERP
-                                    </p>
-                                </li>
-                                </ol>
-                    </div>
-                    <div class="read_buttons">
-                        <a class="read_more" href="#">Read More</a>
-                    </div>
+                <div class="read_buttons">
+                    <a class="read_more" href="#">Read More</a>
                 </div>
-                <div class="box">
-                    <div class="icon"><img
-                            src="https://www.scoreme.in/pro_bfloors/services_img/service_icon/461245170plan.png"></div>
-                    <div class="content">
-                        <h3>OCR PURCAHSE</h3>
-                        <h5>Coming soon</h2>
-                            <ul class="y">
-                                <li>
-                                    <p>Automate purchase entries in Tally through OCR tech. Just scan pdf to create a
-                                        purchase entry in Tally and update in books.
-                                    </p>
-                                </li>
-                                </ol>
-                    </div>
-                    <div class="read_buttons">
-                        <a class="read_more" href="#">Read More</a>
-                    </div>
-                </div>
-
             </div>
-    </div>
+            <div class="box">
+                <div class="icon"><img
+                        src="https://www.scoreme.in/pro_bfloors/services_img/service_icon/461245170plan.png"></div>
+                <div class="content">
+                    <h3>OCR PURCAHSE</h3>
+                    <h5>Coming soon</h2>
+                        <ul class="y">
+                            <li>
+                                <p>Automate purchase entries in Tally through OCR tech. Just scan pdf to create a
+                                    purchase entry in Tally and update in books.
+                                </p>
+                            </li>
+                            </ol>
+                </div>
+                <div class="read_buttons">
+                    <a class="read_more" href="#">Read More</a>
+                </div>
+            </div>
+
+        </div>
+        </div>
     </section>
 
     <div class="reveal">
         <section id="head">
-            <h1>
-                4 REASONS TO SAY YES<br />
-                <strong>& START NOW</strong>
-            </h1>
+            <h1 style="font-weight: 700;">
+                4 REASONS TO START NOW<br />
 
-            <p>
-                Our Artificial Intelligence powered tools use millions of project data
-                points to ensure that your project is successful
-            </p>
+            </h1>
         </section>
 
         <div id="main">
@@ -778,7 +578,8 @@
                         made sense to assemble all business solutions under one umbrella, for the convineance of the
                         user.
                     </p>
-                    <img src="Images/solution.jpg" style="height: 115px;width: 115px;" alt="team builder feature icon" />
+                    <img src="Images/solution.jpg" style="height: 115px;width: 115px;"
+                        alt="team builder feature icon" />
                 </li>
 
                 <li class="orange-feature-card">
@@ -794,15 +595,12 @@
                 </li>
 
                 <li class="blue-feature-card">
-                    <h5>SERVICES AT COMFORTABLE COST</h5>
+                    <h5>GET YOUR BUSINESS DIGITALIZED</h5>
                     <p>
-                        We are here to bring smile to your face, which will be our ultimate earning for life.
-                        Commericaly we
-                        have devised price plans so as to enable all types of businesses to get onboard without any
-                        affect
-                        on their annual budget .
+                        Starting from sharing a business card to a UPI QR-enabled invoice get your complete business
+                        transformed into a digitally enabled entity.
                     </p>
-                    <img src="Images/services.png" alt="calculator feature icon" />
+                    <img src="Images/digital.jpg" alt="calculator feature icon" />
                 </li>
             </ul>
         </div>
@@ -811,43 +609,39 @@
     </div>
 
     <section id="about-us-sec">
-        <section id="boxxed">
 
-            <!--<div class="image">
+
+        <!--<div class="image">
                 <img src="ceo.jpg">
             </div>-->
 
-            <div class="cont">
-                <h2>About Us</h2>
-                <span>
-                    <!-- line here -->
-                </span>
-                <p>We are a startup since 2018 striving to create a simple to use, access for all ,
-                    automated platform to provide ease of doing business. The vision of our promoter Mr. R.K.Agrawal is
-                    backed by an experience of 20 years in small and medium business management.</p>
-                <ul class="links">
-                    <li><a href="#">Read More</a></li>
-                    <div class="vertical-line"></div>
-                    <li><a href="#">service</a></li>
-                    <div class="vertical-line"></div>
-                    <li><a href="#">contact</a></li>
-                </ul>
-                <ul class="icons">
-                    <li>
-                        <i class="fa fa-twitter"></i>
-                    </li>
-                    <li>
-                        <i class="fa fa-facebook"></i>
-                    </li>
-                    <li>
-                        <i class="fa fa-github"></i>
-                    </li>
-                    <li>
-                        <i class="fa fa-pinterest"></i>
-                    </li>
-                </ul>
-            </div>
-        </section>
+        <div class="cont">
+            <h2>About Us</h2>
+            <span>
+                <!-- line here -->
+            </span>
+            <p>We are a startup since 2018 striving to create a business process automation platform
+                for SMB’s and create a cloud network to enable easy, uninterrupted access to business transactions
+                across
+                ERP’s. The vision of our promoter R.K.Agrawal is backed by an experience of 20 years in small and medium
+                business management.</p>
+            <ul class="links">
+                <li><a href="#">Read More</a></li>
+
+            </ul>
+            <ul class="icons">
+                <li>
+                    <i class="fa-brands fa-instagram" style="color:black"></i>
+                </li>
+                <li>
+                    <i class="fa fa-facebook" style="color:black"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-whatsapp" style="color:black"></i>
+                </li>
+            </ul>
+        </div>
+
     </section>
 
 
@@ -856,17 +650,17 @@
             <h3 id="rep"><strong>REPORT CARD</strong></h3>
             <div class="wraped">
                 <div class="contain">
-                    <i class="fa-brands fa-whatsapp" style="color: black"></i>
+                    <i class="fa-brands fa-whatsapp" style="color: green"></i>
                     <span class="num" data-val="10073330">000</span>
                     <span class="texter">FILES SHARED ON WHATSAPP</span>
                 </div>
                 <div class="contain">
-                    <i class="fa-solid fa-indian-rupee-sign" style="color: black;"></i>
+                    <i class="fa-solid fa-indian-rupee-sign" style="color: green;"></i>
                     <span class="num" data-val="100000000">000</span>
                     <span class="texter">TRANSACTIONS THROUGH NETBANKING</span>
                 </div>
                 <div class="contain">
-                    <i class="fa-solid fa-file-invoice" style="color:  black;"></i>
+                    <i class="fa-solid fa-file-invoice" style="color:  green;"></i>
                     <span class="num" data-val="10000">000</span>
                     <span class="texter">MISMATCH REPORTS PREPARED OF GST 2A/2B</span>
                 </div>
@@ -895,7 +689,7 @@
 
     <script type="text/javascript">
         let valueDisplays = document.querySelectorAll(".num");
-        let interval = 1 / 100000000000;
+        let interval = 1 / 50000000000000;
 
         valueDisplays.forEach((valueDisplay) => {
             let startValue = 100;
@@ -918,7 +712,8 @@
             <header class="text-center mb-5 text-white">
                 <div class="row">
                     <div class="col-lg-7 mx-auto">
-                        <h1 style="color:black;font-family:Arial, Helvetica, sans-serif;font-weight:bold">PRICE PLAN</h1>
+                        <h1 style="color:black;font-family:Arial, Helvetica, sans-serif;font-weight:bold">PRICE PLAN
+                        </h1>
                         <p style="color:black;font-weight:bold">Highly customized price plans.<br></p>
                     </div>
                 </div>
@@ -942,7 +737,8 @@
                                 <i class="fa fa-check mr-2 text-primary"></i> Single / Multi users
                             </li>
                             <li class="mb-3">
-                                <i class="fa fa-check mr-2 text-primary"></i> Multi Company</li>
+                                <i class="fa fa-check mr-2 text-primary"></i> Multi Company
+                            </li>
                             <li class="mb-3">
                                 <i class="fa fa-check mr-2 text-primary"></i> 14 Days Valid
                             </li>
@@ -953,7 +749,8 @@
                                 <i class="fa fa-check mr-2 text-primary"></i>Installation & support charges extra*
                             </li>
                         </ul>
-                        <a href="#" class="btn btn-primary btn-block p-2 shadow rounded-pill">Subscribe</a>
+                        <a href="#" class="btn btn-primary btn-block p-2 shadow rounded-pill"
+                            style="width:30vh ;background-color:white">Activate Now</a>
                     </div>
                 </div>
                 <!-- END -->
@@ -973,7 +770,8 @@
                                 <i class="fa fa-check mr-2 text-primary"></i> Single / Multi users
                             </li>
                             <li class="mb-3">
-                                <i class="fa fa-check mr-2 text-primary"></i> Multi Company</li>
+                                <i class="fa fa-check mr-2 text-primary"></i> Multi Company
+                            </li>
                             <li class="mb-3">
                                 <i class="fa fa-check mr-2 text-primary"></i> 30 Days Valid
                             </li>
@@ -984,7 +782,8 @@
                                 <i class="fa fa-check mr-2 text-primary"></i>Installation & support charges extra*
                             </li>
                         </ul>
-                        <a href="#" class="btn btn-primary btn-block p-2 shadow rounded-pill">Subscribe</a>
+                        <a href="#" class="btn btn-primary btn-block p-2 shadow rounded-pill"
+                            style="width:30vh; background-color:white">Activate Now</a>
                     </div>
                 </div>
                 <!-- END -->
@@ -1004,7 +803,8 @@
                                 <i class="fa fa-check mr-2 text-primary"></i> Single user
                             </li>
                             <li class="mb-3">
-                                <i class="fa fa-check mr-2 text-primary"></i> Multi Company</li>
+                                <i class="fa fa-check mr-2 text-primary"></i> Multi Company
+                            </li>
                             <li class="mb-3">
                                 <i class="fa fa-check mr-2 text-primary"></i> 365 Days Valid
                             </li>
@@ -1015,7 +815,8 @@
                                 <i class="fa fa-check mr-2 text-primary"></i>Installation & support charges extra*
                             </li>
                         </ul>
-                        <a href="#" class="btn btn-primary btn-block p-2 shadow rounded-pill">Subscribe</a>
+                        <a href="#" class="btn btn-primary btn-block p-2 shadow rounded-pill"
+                            style="width:30vh;background-color:white">Activate Now</a>
                     </div>
                 </div>
                 <!-- END -->
@@ -1033,7 +834,8 @@
                                 <i class="fa fa-check mr-2 text-primary"></i> 3 users
                             </li>
                             <li class="mb-3">
-                                <i class="fa fa-check mr-2 text-primary"></i> Multi Company</li>
+                                <i class="fa fa-check mr-2 text-primary"></i> Multi Company
+                            </li>
                             <li class="mb-3">
                                 <i class="fa fa-check mr-2 text-primary"></i> 365 Days Valid
                             </li>
@@ -1044,71 +846,13 @@
                                 <i class="fa fa-check mr-2 text-primary"></i>Installation & support charges extra*
                             </li>
                         </ul>
-                        <a href="#" class="btn btn-primary btn-block p-2 shadow rounded-pill">Subscribe</a>
+                        <a href="#" class="btn btn-primary btn-block p-2 shadow rounded-pill"
+                            style="width:30vh;background-color:white">Activate Now</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!--
-                <section id="reasons">
-                <div class="top-text">
-                    <h1>4 Reasons to choose Us</h1>
-                </div>
-                <div class="card">
-                    <div class="card-1">
-                        <h6>OVERCOME REAL PROBLEMS OF BUSINESS </h6>
-                        <p>
-                            Be it business discovery, sales management, order processing, payment recovery, accounts, we have attempted to automate all these
-                            
-                        </p>
-                        <div class="img">
-                            <img src="ocr.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="card-2">
-                        <div class="col-1">
-                            <h6>OVERCOME REAL PROBLEMS OF BUSINESS </h6>
-                            <p>
-                                Be it business discovery, sales management, order processing, payment recovery, accounts, we have attempted to automate all these
-                                
-                            </p>
-                            <div class="img">
-                                <img src="ocr.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <h6>OVERCOME REAL PROBLEMS OF BUSINESS </h6>
-                            <p>
-                                Be it business discovery, sales management, order processing, payment recovery, accounts, we have attempted to automate all these
-                               
-                            </p>
-                            <div class="img">
-                                <img src="ocr.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-3">
-                        <h6>OVERCOME REAL PROBLEMS OF BUSINESS </h6>
-                        <p>
-                            Be it business discovery, sales management, order processing, payment recovery, accounts, we have attempted to automate all these
-                            
-                        </p>
-                        <div class="img">
-                            <img src="ocr.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-        -->
-
-
-
-
-
 
 
 
@@ -1120,7 +864,8 @@
                 <h1 class="faq-page">Is there any trial available?</h1>
                 <!-- faq answer -->
                 <div class="faq-body">
-                    <p>Yes, you can try our software free for 14 days. An extended trial period of 30 days is also available.</p>
+                    <p>Yes, you can try our software free for 14 days. An extended trial period of 30 days is also
+                        available.</p>
                 </div>
             </div>
             <hr class="hr-line">
@@ -1277,76 +1022,6 @@
             });
         }
     </script>
-    <!--
-        <section id="faq">
-        <h2 style="text-align:center">FAQ</h2>
-        <div class="layout">
-            <div class="questions">
-                <div class="ques">
-                    <p>Is there any trial available? </p>
-                </div>
-                <div class="ans">
-                    <p>YES , YOU CAN TRY OUR SOFTWARE FREE FOR 14 DAYS. AN EXTENDED TRIAL PERIOD OF 30 DAYS IS ALSO
-                        AVAILABLE </p>
-                </div>
-                <div class="ques">
-                    <p>Can I add more users to my account in the current plan? +</p>
-                </div>
-                <div class="ans">
-                    <p>yes, by buying ADD-ON PLAN you can add as many users in your current plan.</p>
-                </div>
-                <div class="ques">
-                    <p>Which all version of tally is suported</p>
-                </div>
-                <div class="ans">
-                    <p>All versions of ERP9 & TALLY PRIME</p>
-                </div>
-                <div class="ques">
-                    <p>What is extended trial plan?</p>
-                </div>
-                <div class="ans">
-                    <p>if a user is not fully satisfied in 14 days trial plan and still want some more time of trial
-                        without taking the risk of buying a regular plan then he can go for this plan for Rs 500/- only.
-                        This plan is valid for 30 days.</p>
-                </div>
-                <div class="ques">
-                    <p>What are the limits of corporate plan?</p>
-                </div>
-                <div class="ans">
-                    <p>maximum 3 users can use our software on a same pc</p>
-                </div>
-                <div class="ques">
-                    <p>Will my plan validity extend if i add more users in my current plan?</p>
-                </div>
-                <div class="ans">
-                    <p>yes , at the time of buying more users, we adjust and extend the validity of current users to the
-                        validity of newly added users .
-                        so that validity of all users expires on same day.</p>
-                </div>
-                <div class="ques">
-                    <p>Can I cancel permission or delete user from my account?
-                    </p>
-                </div>
-                <div class="ans">
-                    <p>No. but we are working on this.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script type="text/javascript">
-        let answers = document.querySelectorAll(".questions");
-        answers.forEach((event) => {
-            event.addEventListener("click", () => {
-                if (event.classList.contains("active")) {
-                    event.classList.remove("active");
-                } else {
-                    event.classList.add("active");
-                }
-            });
-        });
-    </script>
--->
 
 
     <footer class="container-fluid bg-grey py-5">
@@ -1359,7 +1034,8 @@
                                 <img src="https://tallykonnect.com/img/logo.png" class="logo-footer"
                                     style="width:190px;height:100px;padding:20px">
                                 <p style="font-size:20px;color:white">Sahibabad,Ghaziabad, UP</p>
-                                <p style="font-size:18px;color:white">Use this tool as test data for an automated system or find
+                                <p style="font-size:18px;color:white">Use this tool as test data for an automated system
+                                    or find
                                     your next pen</p>
                             </div>
                         </div>
